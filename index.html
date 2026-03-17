@@ -12,6 +12,8 @@
     #form-div{
         background-color: rgb(180, 138, 24);
         width: 400px;
+        margin-top: 14%;
+        border-radius: 15px;
     }
 
     .form-control{
@@ -22,12 +24,15 @@
 </style>
 <body>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="container text-center" id="form-div">
 
+        <br>
+
+        <h1>Heat Index Checker</h1>
+
         <details class="ontoggle">
-            <summary>Instructions</summary>
-            <p id="Instructions"></p>
+            <summary><b>Instructions</b></summary>
+            <p id="Instructions">Input the two necessary values and click 'Check' to continue!!</p>
         </details>
 
     <form>
@@ -46,14 +51,18 @@
 
         <br>
 
-        <button type="submit" class="btn btn-info">Check</button>
+        <button type="submit" class="btn btn-info" onclick="CheckHeatIndex()">Check</button>
 
     </form>
+
+    <br>
+
+
     </div>
 
     <script>
 
-        function heatIndex(){
+        function CheckHeatIndex(){
 
             var heatIndex = temperature + (0.33 * humidity) - 4;
             var temperature = document.getElementById("temperature").value;
@@ -95,11 +104,10 @@
 
                 //alert(popup);
 
-            document.getElementById('instructions').innerHTML= "Enter the needed values and click the button to continue!";
-
         }
 
     </script>
+    
     
 </body>
 </html>
