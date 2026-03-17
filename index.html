@@ -10,7 +10,13 @@
 <style>
 
     #form-div{
+        background-color: rgb(180, 138, 24);
+        width: 400px;
+    }
+
+    .form-control{
         width: 350px;
+        margin-left: 4%;
     }
 
 </style>
@@ -44,39 +50,39 @@
         function heatIndex(){
 
             var heatIndex = temperature + (0.33 * humidity) - 4;
-            var temperature = document.getElementById("temp").value;
+            var temperature = document.getElementById("temperature").value;
             var humidity = document.getElementById("humidity").value;
 
             //popup = "";
             
             switch(true){
                 case (heatIndex <= 27) :
-                    //popup = xxx
+                    //popup = "Heat Index Status: Comfortable and Cool"
                     alert("Heat Index Status: Comfortable and Cool")
                     break;
 
                 case ((heatIndex >= 28) && (heatIndex)<=32) :
-                    //popup = xxx
+                    //popup = "Heat Index Status: Warm"
                     alert("Heat Index Status: Warm")
                     break;
 
                 case ((heatIndex >= 33) && (heatIndex)<=37) :
-                    //popup = xxx
+                    //popup = "Heat Index Status: Hot"
                     alert("Heat Index Status: Hot")
                     break;
 
                 case ((heatIndex >= 38) && (heatIndex)<=41) :
-                    //popup = xxx
+                    //popup = "Heat Index Status: Very Hot, Caution"
                     alert("Heat Index Status: Very Hot, Caution")
                     break;
 
                 case (heatIndex >= 42) :
-                    //popup = xxx
+                    //popup = "Heat Index Status: Extreme Heat, Danger"
                     alert("Heat Index Status: Extreme Heat, Danger")
                     break;
 
                 default:
-                    //popup = xxx
+                    //popup = "Heat Index Status: Unidentified. Please try again."
                     alert("Heat Index Status: Unidentified. Please try again.")
                     break;
             }
